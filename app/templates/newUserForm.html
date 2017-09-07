@@ -1,0 +1,11 @@
+{% from "_formhelpers.html" import render_field %}
+<form method=post>
+  <dl>
+    {{ render_field(form.firstname) }}
+    {{ render_field(form.lastname) }}
+    {{ render_field(form.email) }}
+    {{ render_field(form.department) }}
+    {{ form.csrf_token }}
+  </dl>
+  <p><input type=submit value=Toevoegen>
+</form>
